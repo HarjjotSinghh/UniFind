@@ -124,7 +124,7 @@ def extract_table_data(html_file):
 
 
 if __name__ == "__main__":
-    data = extract_table_data("./site.html")
+    data = extract_table_data("./site2.html")
     for i, row in enumerate(data):
         supabase.table("colleges").insert(row).execute()
         print(f"inserted row #{i+1}, {row['name']}")
